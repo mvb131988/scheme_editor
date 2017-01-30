@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scheme schemeTitle="7m">
+  <elementTypes>
+    <type>ai001</type>
+    <type>di001</type>
+  </elementTypes>
+  <imagePath>/tte/scheme_editor/scheme_images/Cotelna_N7_24_06_2015.jpg</imagePath>
+  <displayElement paramType="ai001" uid="ai0011" paramName="03Dai0158rCal01" textName="" description="Температура воды после котла №1" top="282" left="278" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai0012" paramName="03Dai0158rCal03" textName="" description="Давление воды после котла №1" top="322" left="327" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai0013" paramName="03Dai0158rCal00" textName="" description="Температура воды до котла №1" top="361" left="282" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai0014" paramName="" textName="" description="Давление воды перед котлом №1" top="402" left="326" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai0015" paramName="03Dai0140rCal01" textName="" description="Температура воды после котла №2" top="333" left="728" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai0016" paramName="03Dai0138rCal03" textName="" description="Давление воды после котла №2" top="373" left="771" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai0017" paramName="03Dai0140rCal00" textName="" description="Температура воды до котла №2" top="415" left="729" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai0018" paramName="03Dai0138rCal02" textName="" description="Давление воды до котла №2" top="454" left="773" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai0019" paramName="03Dai010FrCal01" textName="" description="Температура воды после котла №3" top="333" left="1106" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00110" paramName="03Dai0108rCal03" textName="" description="Давление воды после котла №3" top="374" left="1154" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00111" paramName="03Dai010FrCal00" textName="" description="Температура воды после котла №3" top="414" left="1107" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00112" paramName="03Dai0108rCal02" textName="" description="Давление воды перед котлом №3" top="453" left="1155" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00113" paramName="03Dai0108rCal04" textName="" description="Температура уходящих газов котла №3" top="175" left="967" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00114" paramName="03Dai0138rCal04" textName="" description="Температура уходящих газов котла №2" top="176" left="548" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00115" paramName="03Dai03SV02" textName="" description="Температура воды в подающем трубопроводе" top="793" left="1103" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00116" paramName="03Dai03SV15" textName="" description="Давление воды в подающем трубопроводе" top="835" left="1149" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00117" paramName="03Dai03SV25" textName="" description="Кол-во прокачанной воды" top="873" left="1122" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00118" paramName="03Dai03SV04" textName="" description="Температура воды подпитки" top="581" left="1440" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00119" paramName="03Dai03SV29" textName="" description="Кол-во подпиточной воды" top="622" left="1486" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00120" paramName="03Dai03SV03" textName="" description="Температура воды в обратном трубопроводе" top="830" left="1375" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00121" paramName="03Dai03SV16" textName="" description="Давление воды в обратном трубопроводе" top="870" left="1418" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0011" paramName="03Ddi0148rCn03" textName="" description="Работа горелки №1  котла №2" top="486" left="698" defImgPath="">
+    <di001>
+      <zeroStatus>alarm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>1g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0012" paramName="03Ddi0148rCn04" textName="" description="Работа горелки №2  котла №2" top="485" left="790" defImgPath="">
+    <di001>
+      <zeroStatus>alarm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>1g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0013" paramName="03Ddi0128rCn03" textName="" description="Работа горелки №1  котла №3" top="484" left="1080" defImgPath="">
+    <di001>
+      <zeroStatus>alarm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>1g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0014" paramName="03Ddi0128rCn04" textName="" description="Работа горелки №2  котла №3" top="483" left="1168" defImgPath="">
+    <di001>
+      <zeroStatus>alarm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>1g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0015" paramName="03Ddi0128rCn00" textName="" description="Минимум давления газа" top="191" left="1345" defImgPath="">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0016" paramName="03Ddi0128rCn01" textName="" description="Минимум  давления воздуха" top="212" left="1345" defImgPath="">
+    <di001>
+      <zeroStatus>alarm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0017" paramName="03Ddi0128rCn02" textName="" description="Высокое разряжение в топке  котла №3" top="231" left="1345" defImgPath="">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0018" paramName="03Ddi0128rCn05" textName="" description="Максимум давления воды за котлом №3" top="254" left="1345" defImgPath="">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0019" paramName="03Ddi0128rCn06" textName="" description="Минимум давление воды за котлом №3" top="273" left="1345" defImgPath="">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00110" paramName="03Ddi0128rCn07" textName="" description="Уменьшение расхода воды через котёл" top="293" left="1345" defImgPath="">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00111" paramName="03Ddi0128rCn08" textName="" description="Превышение температуры воды в котле" top="316" left="1345" defImgPath="">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00112" paramName="03Ddi0148rCn00" textName="" description="Минимум давления газа" top="394" left="1345" defImgPath="">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00113" paramName="03Ddi0148rCn01" textName="" description="Минимум  давления воздуха" top="414" left="1345" defImgPath="">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00114" paramName="03Ddi0148rCn02" textName="" description="Высокое разряжение в топке" top="435" left="1345" defImgPath="">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00115" paramName="03Ddi0148rCn05" textName="" description="Максимум давления воды за котлом" top="455" left="1345" defImgPath="">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00116" paramName="03Ddi0148rCn06" textName="" description="Минимум давление воды за котлом" top="476" left="1345" defImgPath="">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00117" paramName="03Ddi0148rCn07" textName="" description="Уменьшение расхода воды через котёл" top="495" left="1345" defImgPath="">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00118" paramName="03Ddi0148rCn08" textName="" description="Превышение температуры воды в котле" top="517" left="1345" defImgPath="">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00119" paramName="03Ddi0148rCn13" textName="" description="Работа вентилятора №1  котла №2" top="243" left="610" defImgPath="/hmi/elements/i/di001/img/propeller/u.gif">
+    <di001>
+      <zeroStatus>alarm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>1g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00120" paramName="03Ddi0148rCn12" textName="" description="Работа вентилятора №2  котла №2" top="238" left="856" defImgPath="/hmi/elements/i/di001/img/propeller/u.gif">
+    <di001>
+      <zeroStatus>alarm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>1g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00121" paramName="03Ddi0148rCn11" textName="" description="Работа дымомсоса  котла №2" top="149" left="806" defImgPath="/hmi/elements/i/di001/img/propeller/u.gif">
+    <di001>
+      <zeroStatus>alarm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>1g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00122" paramName="03Ddi0128rCn13" textName="" description="Работа вентилятора №1  котла №3" top="239" left="999" defImgPath="/hmi/elements/i/di001/img/propeller/u.gif">
+    <di001>
+      <zeroStatus>alarm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>1g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00123" paramName="03Ddi0128rCn12" textName="" description="Работа вентилятора №2  котла №3" top="242" left="1229" defImgPath="/hmi/elements/i/di001/img/propeller/u.gif">
+    <di001>
+      <zeroStatus>alarm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>1g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00124" paramName="03Ddi0128rCn11" textName="" description="Работа дымомсоса  котла №3" top="156" left="1196" defImgPath="/hmi/elements/i/di001/img/propeller/u.gif">
+    <di001>
+      <zeroStatus>alarm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>1g</mode>
+    </di001>
+  </displayElement>
+</scheme>

@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*img_select_plugin{
+	width: 106px;
+	font: 12px Arial, sans-serif;
+	position: absolute;
+	left: 100px;
+	top: 100px;
+}*/
+
+
+#img_gallery_plugin{
+	position: absolute;
+	border: thin solid #600;
+	/*width: 100px;*/
+	height: 150px;
+	position: absolute;
+	top: 120px;
+	left: 100px;
+	overflow: auto;
+	background-color: #FFF;
+}

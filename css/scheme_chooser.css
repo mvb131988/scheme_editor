@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+#schemes_configuration
+{
+	margin-top: 30px;
+}
+
+input.scheme_selector
+{
+	left: 10px;
+	margin-right: 20px;
+}
+
+#open_scheme
+{
+	width: 100%;
+}
+
+#delete_scheme
+{
+	width: 100%;
+}

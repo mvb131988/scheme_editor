@@ -1,0 +1,6 @@
+serveall=true&default_charset="utf-8"
+
+file=index&content=text/plain; charset="utf-8"&title=File index
+file=table.html&content=text/html; charset="utf-8"&title=Temperature
+file=table.png&content=image/png&title=File table.png
+file=table.xml&content=text/plain; charset="utf-8"&title=File table.xml

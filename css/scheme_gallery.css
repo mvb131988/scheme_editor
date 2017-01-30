@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#scheme_gallery
+{
+	
+}
+
+
+#scheme_gallery td
+{
+	text-align: center;
+	padding: 15px;
+}
+
+
+img.scheme_gallery_img
+{
+	border: 1px solid #000;
+	cursor: pointer;
+}
+
+
+#preview_mode
+{
+	margin-top: 30px;
+}
+
+
+#scheme_name_label
+{
+	width: 450px;
+	float: left;
+}
+
+
+#scheme_name
+{
+	width: 150px;
+}
+
+
+#preview_mode_save_button
+{
+	width: 150px; 
+}

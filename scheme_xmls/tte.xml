@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scheme schemeTitle="tte">
+  <elementTypes>
+    <type>ai001</type>
+    <type>di001</type>
+    <type>aq001</type>
+    <type>dq001</type>
+  </elementTypes>
+  <imagePath>/tte/scheme_editor/scheme_images/tte.png</imagePath>
+  <displayElement paramType="ai001" uid="ai0011" paramName="037ai04SV02" textName="" description="Котельная №9 (г.Тирасполь). Температура в подаче сети отопления." top="172" left="804" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai0012" paramName="043ai03SV02" textName="" description="Котельная №10 (г.Тирасполь). Температура в подаче сети отопления." top="199" left="804" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai0013" paramName="037ai03SV02" textName="" description="Котельная №9 (г.Тирасполь). Температура ГВС." top="171" left="1143" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai0014" paramName="043ai04SV02" textName="" description="Котельная №10 (г.Тирасполь). Температура ГВС." top="198" left="1143" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai0015" paramName="03Dai03SV02" textName="" description="Котельная №7 (г.Тирасполь). Температура в подаче сети отопления." top="117" left="804" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai0016" paramName="03Fai04SV06" textName="" description="Котельная в с.Красное. Температура в обратке сети отопления." top="500" left="975" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai0017" paramName="040ai04SV05" textName="" description="Котельная №5 (г.Слободзея). Температура в подаче сети отопления." top="473" left="805" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai0018" paramName="03Dai03SV15" textName="" description="Котельная №7 (г.Тирасполь). Давление в подаче сети отопления." top="116" left="890" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai0019" paramName="03Dai03SV03" textName="" description="Котельная №7 (г.Тирасполь). Температура в обратке сети отопления." top="116" left="975" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00110" paramName="03Dai03SV16" textName="" description="Котельная №7 (г.Тирасполь). Давление в обратке сети отопления." top="116" left="1062" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00111" paramName="046ai04SV05" textName="" description="Котельная в с.Красная Горка. Температура в подаче сети отопления." top="391" left="804" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00112" paramName="046ai04SV06" textName="" description="Котельная в с.Красная Горка. Температура в обратке сети отопления." top="392" left="975" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00113" paramName="03Bai0330rEAd04" textName="" description="Котельная №6 (г.Тирасполь). Температура в подаче сети отопления." top="88" left="804" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00114" paramName="03Bai0330rEAd07" textName="" description="Котельная №6 (г.Тирасполь). Давление в подаче сети отопления." top="88" left="890" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кПа</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00115" paramName="03Bai0330rEAd02" textName="" description="Котельная №6 (г.Тирасполь). Температура в обратке сети отопления." top="87" left="975" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00116" paramName="03Bai0310rCal02" textName="" description="Котельная №6 (г.Тирасполь). Давление в обратке сети отопления." top="88" left="1062" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00117" paramName="03Bai0330rEAd03" textName="" description="Котельная №6 (г.Тирасполь). Температура ГВС." top="88" left="1143" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00118" paramName="041ai0420rEAd04" textName="" description="Котельная №16 (с.Ближний Хутор). Температура в подаче сети отопления." top="337" left="804" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00119" paramName="041ai0410rEAd04" textName="" description="Котельная №16 (с.Ближний Хутор). Давление в подаче сети отопления." top="336" left="890" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00120" paramName="041ai0420rEAd02" textName="" description="Котельная №16 (с.Ближний Хутор). Температура в обратке сети отопления." top="336" left="975" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00121" paramName="041ai0420rEAd07" textName="" description="Котельная №16 (с.Ближний Хутор). Давление в обратке сети отопления." top="336" left="1062" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кПа</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00122" paramName="037ai0220rEAd01" textName="" description="Котельная №9 (г.Тирасполь). Давление в подаче сети отопления." top="172" left="890" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00123" paramName="037ai04SV03" textName="" description="Котельная №9 (г.Тирасполь). Температура в обратке сети отопления." top="172" left="975" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00124" paramName="037ai0220rEAd02" textName="" description="Котельная №9 (г.Тирасполь). Давление в обратке сети отопления." top="172" left="1062" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00125" paramName="043ai0220rEAd01" textName="" description="Котельная №10 (г.Тирасполь). Давление в подаче сети отопления." top="199" left="890" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00126" paramName="043ai03SV03" textName="" description="Котельная №10 (г.Тирасполь). Температура в обратке сети отопления." top="199" left="975" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00127" paramName="043ai0220rEAd02" textName="" description="Котельная №10 (г.Тирасполь). Давление в обратке сети отопления." top="199" left="1062" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00128" paramName="042ai04SV05" textName="" description="Котельная №12 (г.Тирасполь). Температура в подаче сети отопления." top="226" left="805" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00129" paramName="042ai04SV06" textName="" description="Котельная №12 (г.Тирасполь). Температура в обратке сети отопления." top="227" left="975" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00130" paramName="039ai0330rEAd01" textName="" description="Котельная №23 (г.Тирасполь). Температура в подаче сети отопления." top="280" left="804" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00131" paramName="039ai0330rEAd02" textName="" description="Котельная №23 (г.Тирасполь). Температура в обратке сети отопления." top="282" left="975" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00132" paramName="039ai0330rEAd03" textName="" description="Котельная №23 (г.Тирасполь). Температура ГВС." top="282" left="1143" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00133" paramName="03Eai010056" textName="" description="Теплопункт 1 (г.Тирасполь, ул.Одесская 78/5). Температура в подаче сети отопления." top="308" left="803" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>/</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00134" paramName="03Eai010057" textName="" description="Теплопункт 1 (г.Тирасполь, ул.Одесская 78/5). Температура в обратке сети отопления." top="308" left="973" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>/</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00135" paramName="03Fai04SV05" textName="" description="Котельная в с.Красное. Температура в подаче сети отопления." top="501" left="804" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00136" paramName="040ai04SV06" textName="" description="Котельная №5 (г.Слободзея). Температура в обратке сети отопления." top="473" left="975" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00137" paramName="045ai04SV02" textName="" description="Котельная №2 (г.Тирасполь). Температура в подаче сети отопления." top="63" left="804" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00138" paramName="045ai04SV15" textName="" description="Котельная №2 (г.Тирасполь). Давление в подаче сети отопления." top="63" left="890" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00139" paramName="045ai04SV03" textName="" description="Котельная №2 (г.Тирасполь). Температура в обратке сети отопления." top="62" left="975" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00140" paramName="045ai04SV16" textName="" description="Котельная №2 (г.Тирасполь). Давление в обратке сети отопления." top="63" left="1062" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>2</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00141" paramName="045ai04SV50" textName="" description="Котельная №2 (г.Тирасполь). Тепловая энергия сети отопления." top="62" left="1226" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00142" paramName="045ai04SV55" textName="" description="Котельная №2 (г.Тирасполь). Тепловая мощность сети отопления." top="63" left="1311" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00143" paramName="042ai04SV51" textName="" description="Котельная №12 (г.Тирасполь). Тепловая энергия сети отопления." top="227" left="1223" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00144" paramName="042ai04SV56" textName="" description="Котельная №12 (г.Тирасполь). Тепловая мощность сети отопления." top="227" left="1309" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00145" paramName="044ai04SV02" textName="" description="Котельная в (с.Фрунзе.) Температура в подаче сети отопления." top="530" left="804" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00146" paramName="044ai04SV03" textName="" description="Котельная в (с.Фрунзе.) Температура в обратке сети отопления." top="530" left="975" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00147" paramName="047ai04SV02" textName="" description="Котельная №2 (г.Григориополь). Температура в подаче сети отопления." top="419" left="804" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00148" paramName="047ai04SV03" textName="" description="Котельная №2 (г.Григориополь). Температура в обратке сети отопления." top="419" left="975" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00149" paramName="047ai04SV50" textName="" description="Котельная №2 (г.Григориополь). Тепловая энергия сети отопления." top="419" left="1226" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00150" paramName="047ai04SV55" textName="" description="Котельная №2 (г.Григориополь). Тепловая мощность сети отопления." top="420" left="1310" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00151" paramName="039ai0320rEAd06" textName="" description="Котельная №23 (г.Тирасполь). Давление в подаче сети отопления." top="281" left="890" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00152" paramName="03Aai04SV02" textName="" description="Котельная №19 (с.Суклея). Температура в подаче сети отопления." top="364" left="804" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00153" paramName="03Aai04SV03" textName="" description="Котельная №19 (с.Суклея). Температура в обратке сети отопления." top="365" left="975" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00154" paramName="03Aai04SV50" textName="" description="Котельная №19 (с.Суклея). Тепловая энергия сети отопления." top="363" left="1226" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00155" paramName="03Aai04SV55" textName="" description="Котельная №19 (с.Суклея). Тепловая мощность сети отопления." top="363" left="1309" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00156" paramName="039ai0310rEAd00" textName="" description="Котельная №23 (г.Тирасполь). Давление в обратке сети отопления." top="281" left="1060" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00157" paramName="043ai03SV15" textName="" description="Котельная №10 (г.Тирасполь). Тепловая энергия сети отопления." top="198" left="1226" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00158" paramName="048ai0310rEAd04" textName="" description="Котельная №8 (г.Тирасполь). Давление в подаче сети отопления." top="144" left="890" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00159" paramName="048ai0310rEAd05" textName="" description="Котельная №8 (г.Тирасполь). Давление в обратке сети отопления." top="143" left="1060" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00160" paramName="038ai0430rEAd02" textName="" description="Котельная №20 (г.Тирасполь). Температура в подаче сети отопления." top="254" left="804" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00161" paramName="038ai0410rEAd02" textName="" description="Котельная №20 (г.Тирасполь). Давление в подаче сети отопления." top="254" left="890" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00162" paramName="038ai0410rEAd03" textName="" description="Котельная №20 (г.Тирасполь). Давление в обратке сети отопления." top="254" left="1062" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00163" paramName="038ai0430rEAd03" textName="" description="Котельная №20 (г.Тирасполь). Температура ГВС." top="254" left="1143" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>°C</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00164" paramName="042ai0310rEAd04" textName="" description="Котельная №12 (г.Тирасполь). Давление в подаче сети отопления." top="226" left="891" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00165" paramName="042ai0310rEAd05" textName="" description="Котельная №12 (г.Тирасполь). Давление в обратке сети отопления." top="226" left="1062" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00166" paramName="03Aai0310rEAd07" textName="" description="Котельная №19 (с.Суклея). Давление в подаче сети отопления." top="364" left="892" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00167" paramName="03Aai0310rEAd06" textName="" description="Котельная №19 (с.Суклея). Давление в обратке сети отопления." top="363" left="1062" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00168" paramName="046ai0320rEAd02" textName="" description="Котельная (с.Красная Горка). Давление в подаче сети отопления." top="391" left="891" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00169" paramName="046ai0320rEAd01" textName="" description="Котельная (с.Красная Горка). Давление в обратке сети отопления." top="391" left="1062" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00170" paramName="046ai04SV50" textName="" description="Котельная (с.Красная Горка). Тепловая энергия сети отопления." top="391" left="1225" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00171" paramName="046ai04SV55" textName="" description="Котельная (с.Красная Горка). Тепловая мощность сети отопления." top="391" left="1311" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00172" paramName="040ai0320rEAd01" textName="" description="Котельная №5 (г.Слободзея). Давление в подаче сети отопления." top="473" left="891" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00173" paramName="040ai0320rEAd02" textName="" description="Котельная №5 (г.Слободзея). Давление в обратке сети отопления." top="474" left="1062" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00174" paramName="040ai04SV50" textName="" description="Котельная №5 (г.Слободзея). Тепловая энергия сети отопления." top="474" left="1227" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00175" paramName="03Fai0320rEAd01" textName="" description="Котельная (с.Красное). Давление в подаче сети отопления." top="501" left="891" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00176" paramName="03Fai0320rEAd02" textName="" description="Котельная (с.Красное). Давление в обратке сети отопления." top="501" left="1062" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кг/см²</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00177" paramName="044ai04SV15" textName="" description="Котельная в (с.Фрунзе.) Тепловая энергия сети отопления." top="529" left="1227" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00178" paramName="044ai04SV25" textName="" description="Котельная (с.Фрунзе). Тепловая мощность сети отопления." top="529" left="1312" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00179" paramName="047ai0330rEAd07" textName="" description="Котельная №2 (г.Григориополь). Давление в обратке сети отопления." top="419" left="1061" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit>кПа</unit>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00180" paramName="03Eai410056" textName="" description="Теплопункт 2 (г.Тирасполь, ул.Одесская 78/5). Температура в подаче сети отопления." top="307" left="846" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="ai001" uid="ai00181" paramName="03Eai410057" textName="" description="Теплопункт 2 (г.Тирасполь, ул.Одесская 78/5). Температура в обратке сети отопления." top="308" left="1019" defImgPath="">
+    <ai001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0011" paramName="045diisAlarm" textName="" description="" top="65" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0012" paramName="03BdiisAlarm" textName="" description="Alarm" top="90" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0013" paramName="03DdiisAlarm" textName="" description="" top="117" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0014" paramName="048diisAlarm" textName="" description="" top="145" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0015" paramName="037diisAlarm" textName="" description="" top="171" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0016" paramName="043diisAlarm" textName="" description="" top="200" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0017" paramName="042diisAlarm" textName="" description="" top="227" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0018" paramName="038diisAlarm" textName="" description="" top="255" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di0019" paramName="039diisAlrm" textName="" description="" top="282" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00110" paramName="03EdiisAlarm" textName="" description="" top="310" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00111" paramName="041diisAlarm" textName="" description="" top="339" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00112" paramName="03AdiGPIO00" textName="" description="" top="365" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00113" paramName="046diisAlarm" textName="" description="" top="393" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00114" paramName="047diisAlarm" textName="" description="" top="420" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00115" paramName="049diisAlarm" textName="" description="" top="449" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00116" paramName="040diisAlarm" textName="" description="" top="475" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00117" paramName="03FdiisAlarm" textName="" description="" top="504" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00118" paramName="044diisAlarm" textName="" description="" top="531" left="550" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00119" paramName="001diping69" textName="" description="" top="65" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00120" paramName="001diping59" textName="" description="" top="90" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00121" paramName="001diping61" textName="" description="" top="117" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00122" paramName="001diping72" textName="" description="" top="145" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00123" paramName="001diping55" textName="" description="" top="171" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00124" paramName="001diping67" textName="" description="" top="200" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00125" paramName="001diping66" textName="" description="" top="227" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00126" paramName="001diping56" textName="" description="" top="255" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00127" paramName="001diping57" textName="" description="" top="282" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00128" paramName="001diping62" textName="" description="" top="310" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00129" paramName="001diping65" textName="" description="" top="339" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00130" paramName="001diping58" textName="" description="" top="365" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00131" paramName="001diping70" textName="" description="" top="393" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00132" paramName="001diping71" textName="" description="" top="420" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00133" paramName="001diping73" textName="" description="" top="449" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00134" paramName="001diping64" textName="" description="" top="475" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00135" paramName="001diping63" textName="" description="" top="502" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <displayElement paramType="di001" uid="di00136" paramName="001diping68" textName="" description="" top="531" left="121" defImgPath="../hmi/elements/i/di001/img/greenred/u.gif">
+    <di001>
+      <zeroStatus>warning</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </di001>
+  </displayElement>
+  <controlElement paramType="aq001" uid="aq0011" paramName="03Dai03SV50" paramOutName="" textName="" description="Котельная №7 (г.Тирасполь). Тепловая энергия сети отопления." top="116" left="1223" defImgPath="">
+    <aq001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLb="false" depLr="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLbVal="" depLrVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </aq001>
+  </controlElement>
+  <controlElement paramType="aq001" uid="aq0012" paramName="03Dai03SV55" paramOutName="" textName="" description="Котельная №7 (г.Тирасполь). Тепловая мощность сети отопления." top="115" left="1311" defImgPath="">
+    <aq001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLb="false" depLr="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLbVal="" depLrVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </aq001>
+  </controlElement>
+  <controlElement paramType="aq001" uid="aq0013" paramName="037ai04SV15" paramOutName="" textName="" description="Котельная №9 (г.Тирасполь). Тепловая энергия сети отопления." top="171" left="1223" defImgPath="">
+    <aq001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLb="false" depLr="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLbVal="" depLrVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </aq001>
+  </controlElement>
+  <controlElement paramType="aq001" uid="aq0014" paramName="037ai04SV25" paramOutName="" textName="" description="Котельная №9 (г.Тирасполь). Тепловая мощность сети отопления." top="170" left="1311" defImgPath="">
+    <aq001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLb="false" depLr="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLbVal="" depLrVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </aq001>
+  </controlElement>
+  <controlElement paramType="aq001" uid="aq0015" paramName="043ai03SV25" paramOutName="" textName="" description="Котельная №10 (г.Тирасполь). Тепловая мощность сети отопления." top="198" left="1311" defImgPath="">
+    <aq001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLb="false" depLr="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLbVal="" depLrVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </aq001>
+  </controlElement>
+  <controlElement paramType="aq001" uid="aq0016" paramName="03Fai04SV07" paramOutName="" textName="" description="Котельная в с.Красное. Тепловая энергия сети отопления." top="501" left="1226" defImgPath="">
+    <aq001 color="black">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLb="false" depLr="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLbVal="" depLrVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </aq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq0011" paramName="" paramOutName="" textName="Эксплуатация" description="Э" top="60" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq0012" paramName="001di59exp" paramOutName="001di59exp" textName="" description="" top="86" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq0013" paramName="001di61exp" paramOutName="001di61exp" textName="" description="" top="113" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq0014" paramName="001di69exp" paramOutName="001di69exp" textName="" description="" top="142" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq0015" paramName="001di55exp" paramOutName="001di55exp" textName="" description="" top="168" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq0016" paramName="001di67exp" paramOutName="001di67exp" textName="" description="" top="196" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq0017" paramName="001di66exp" paramOutName="001di66exp" textName="" description="" top="223" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq0018" paramName="001di67exp" paramOutName="001di67exp" textName="" description="" top="251" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq0019" paramName="001di57exp" paramOutName="001di57exp" textName="" description="" top="278" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq00110" paramName="001di62exp" paramOutName="001di62exp" textName="" description="" top="306" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq00111" paramName="001di65exp" paramOutName="001di65exp" textName="" description="" top="335" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq00112" paramName="001di58exp" paramOutName="001di58exp" textName="" description="" top="361" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq00113" paramName="001di70exp" paramOutName="001di70exp" textName="" description="" top="389" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq00114" paramName="001di71exp" paramOutName="001di71exp" textName="" description="" top="416" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq00115" paramName="" paramOutName="" textName="" description="" top="445" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq00116" paramName="001di64exp" paramOutName="001di64exp" textName="" description="" top="471" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq00117" paramName="001di63exp" paramOutName="001di63exp" textName="" description="" top="500" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq00118" paramName="" paramOutName="" textName="" description="" top="527" left="50" defImgPath="../hmi/elements/q/dq001/img/default/u.gif">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+</scheme>

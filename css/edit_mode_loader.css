@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+div.save_confirm_div
+{
+	z-index: 30;
+	width: 400px;
+	height: 100px;
+	background-color: #B3BEF4;
+ 	position: absolute;
+  	left: 50%;
+  	top: 50%;
+  	margin-left: -200px;
+  	margin-top: -50px;
+	text-align: center;
+	font-family: Calibri;
+	font-size: 32px;
+}
+
+
+span.save_confirm_label
+{
+	top: 10px;
+	left: 20px;
+	position: absolute;
+}
+
+
+div.save_as_menu
+{
+	z-index: 30;
+	width: 400px;
+	height: 70px;
+	background-color: #FFF;
+	border: 2px solid #2A5FAA; 
+	border-top: 15px solid #000080;
+	border-left: 2px solid #2A5FAA;
+ 	position: absolute;
+	left: 50%;
+  	top: 50%; 
+	margin-left: -230px;
+  	margin-top: -50px;
+	font-family: Calibri;
+}
+
+
+span.save_as_title
+{
+	left: 10px;
+	top: 10px;
+	position: absolute;
+}
+
+
+#save_as_input
+{
+	width: 170px;
+	left: 202px;
+	top: 10px;
+	position: absolute;
+}
+
+
+#save_as_button
+{
+	width: 90px;
+	left: 200px;
+	top: 35px;
+	position: absolute;
+}
+
+
+#save_as_cancel_button
+{
+	width: 90px;
+	left: 290px;
+	top: 35px;
+	position: absolute;
+}

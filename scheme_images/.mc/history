@@ -1,0 +1,31 @@
+
+[Dir Hist New Right Panel]
+0=/
+
+[Dir Hist New Left Panel]
+0=/home/ftpuser
+1=/home
+2=/opt/rh
+3=/opt
+4=/media
+5=/misc
+6=/lib/bdevid
+7=/lib/dbus-1
+8=/lib/firmware
+9=/lib
+10=/boot/grub
+11=/boot
+12=/bin
+13=/sbin
+14=/usr
+15=/
+16=/var
+17=/var/lovati/config/channels
+18=/var/lovati/config/entry
+19=/var/lovati/config/dds
+20=/var/lovati/config
+21=/var/lovati/log
+22=/var/lovati/stunnel_odessa
+23=/var/lovati
+24=/var/lovati/www_old/pns10
+25=/var/lovati/www_old
