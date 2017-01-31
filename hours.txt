@@ -1,0 +1,5 @@
+Task1: 
+1. Change xml schema representation from one column table to a multi columns table.
+2. Implements xml schemas names sorting.
+
+Already spent 3 hours
