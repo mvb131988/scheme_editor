@@ -3602,30 +3602,31 @@ $(document).ready(function(){
 		 */
 		scheme_chooser.displayXmlSchemesList = function(mode)
 		{
-/*bob*/			$.post('/tte/scheme_editor/php/getSchemesList.php', function(data){
+/*bob*/		$.post('/tte/scheme_editor/php/getSchemesList.php', function(data){
 					var file_names = data.split('\n');
+					sortXmlSchemesList(file_names);
 					
-					schemes_config = $('<table id="schemes_configuration" align="center"' + 
-										'cellpadding="5">');
+					schemes_config = 
+									  $('<table id="schemes_configuration" align="center" cellpadding="5">');
 					var current_row = $('<tr><td>Выберите мнемосхему из списка:</td></tr>');
 					current_row = (mode == constructSchemeChooser.deleteMode ? 
-										   $('<tr><td>Выберите мнемосхемы для удаления:</td></tr>') : 
-										   current_row);
+								   $('<tr><td>Выберите мнемосхемы для удаления:</td></tr>') : 
+								   current_row);
 					schemes_config.append(current_row);
 					
 					/** Тип input-ов(radio для открытия и checkbox для удаления). */
 					var input_type = 'radio';
 					input_type = (mode == constructSchemeChooser.deleteMode ? 'checkbox' : input_type);
+					
 					// Set the default value. It's assumed, that the column_value is static.
-					var column_count = 3;
-					for(var i=0; i<file_names.length-1; i++)
-					{
-						var scheme_name = file_names[i].substr(0, file_names[i].indexOf('.')); 
-						current_row = $(
-							'<tr><td><input type="' + input_type + '" name="schemes" id = "' + scheme_name + 
-							'" class="scheme_selector" />' + scheme_name + '</td></tr>');
-						schemes_config.append(current_row);
-					}
+					var column_count = 8;
+					var schemes_table = internallyDisplayXmlSchemesList(file_names, column_count, input_type);
+					// UI preparation to insert xml schemes table into container UI elements
+					var schemes_table_row_container = $('<tr></tr>');
+					var schemes_table_cell_container = $('<td></td>');
+					schemes_config.append(schemes_table_row_container);
+					schemes_table_row_container.append(schemes_table_cell_container);
+					schemes_table_cell_container.append(schemes_table);
 					
 					var button_id = 'open_scheme';
 					var button_value = 'Открыть';
@@ -3672,6 +3673,78 @@ $(document).ready(function(){
 			});
 		}
 		
+		/**
+		 *  Display xml schemes list in the table
+		 *	file_names - array of schema xml file names
+		 *	column_count - number of columns in the output table
+		 *  input_type - radio/checkbox type of the ui elements depends on open/delete mode of the editor
+		 *	
+		 *	returns jQuery object representing xml schemes list in the table
+		 */
+		function internallyDisplayXmlSchemesList(file_names, column_count, input_type) {
+			var schemes_table = $('<table id="schemes_list_as_table" border="1" cellpadding="5">');
+			
+			var start = 0;
+			var stop = column_count;
+			
+			while(stop<file_names.length) {
+				var row = $('<tr>');
+				
+				for(var i=start; i < stop; i++) {
+					// skip empty names if such exist
+					if(file_names[i]) {
+						var scheme_name = file_names[i].substr(0, file_names[i].indexOf('.'));
+						var cell = $('<td><input type="' + input_type + '" name="schemes" id = "' + scheme_name + 
+									 '" class="scheme_selector" />' + scheme_name + '</td>');
+						row.append(cell);
+					}
+				}
+				schemes_table.append(row);
+				
+				start = stop;
+				stop = stop + column_count;
+			}
+			
+			// create the last row
+			if(start < file_names.length) {
+				var row = $('<tr>');
+				
+				for(var i=0; i < column_count; i++) {
+					if((start + i < file_names.length) && (file_names[start + i])) {
+						var scheme_name = file_names[start + i].substr(0, file_names[start + i].indexOf('.'));
+						var cell = $('<td><input type="' + input_type + '" name="schemes" id = "' + scheme_name + 
+									 '" class="scheme_selector" />' + scheme_name + '</td>');
+						row.append(cell);
+					} 
+					else {
+						var cell = $('<td>');
+						row.append(cell);
+					}
+				}
+				
+				schemes_table.append(row);
+			}
+			
+			return schemes_table;
+		}
+		
+		/**
+		 *	Define an output order
+		 *  file_names - array to be sorted
+		 */
+		function sortXmlSchemesList(file_names) {
+			file_names.sort(function(a,b){
+				if(a == b) {
+					return 0;
+				}
+				if(a > b) {
+					return 1;
+				}			
+				if(a < b) {
+					return -1;
+				}					
+			});
+		}
 		
 		/**
          *  Отключение режима выбора мнемосхемы.   		
