@@ -3494,7 +3494,14 @@ $(document).ready(function(){
 /*bob*/			$.post('/tte/scheme_editor/php/getSchemeImagesList.php', function(data){
 				var file_names = data.split('\n');
 				
-				schemes_gallery = $('<table id="schemes_gallery" align="center">');
+				schemes_gallery = $('<div>');
+				var previewElement = createPreviewElement();
+				schemes_gallery.append(previewElement);
+				
+				// schemes gallery table container
+				var sg_table = $('<table id="schemes_gallery" align="center" width="100%" cellpadding="10px">')
+				schemes_gallery = schemes_gallery.append(sg_table);
+				
 				var new_line_counter = 0;
 				var current_row = null;
 				for(var i=0; i<file_names.length-1; i++)
@@ -3504,23 +3511,69 @@ $(document).ready(function(){
 					{
 						current_row = $('<tr>');
 					}
-/*bob*/					current_row.append('<td><img class="scheme_gallery_img" src="/tte/scheme_editor/scheme_images/'+ 
-									   file_names[i] + '" width="300px" height="200px" /></td>');
+/*bob*/					var current_cell = $(
+							'<td align="center">' +
+								'<div name="schema_img_name" style="display:inline-block" class="scheme_gallery_img">' +
+								 file_names[i] + 
+								'</div></td>' +
+							'</td>'	
+							// +
+							// '<img class="scheme_gallery_img" src="/tte/scheme_editor/scheme_images/'+ 
+							// file_names[i] + '" width="300px" height="200px" /></td>'
+						);
+						current_cell.find("div").data("filename", file_names[i]);
+						current_row.append(current_cell);
 					if((new_line_counter == 3)||(i == file_names.length-2))
 					{
-						current_row.find('img').bind('click', function(ui,event)
+						current_row.find('div[name="schema_img_name"]').hover( 
+							function(ui,event) 
+							{
+								var offset = $(this).offset();
+								var offsetX = offset.left;
+								var offsetY = offset.top;
+								
+								var x = offsetX + $(this).width();
+								var y = offsetY + $(this).height();
+								
+								previewElement.css("display", "block");	
+								previewElement.css("position", "absolute");
+								previewElement.css("top", y); 
+								previewElement.css("left", x);
+								
+								var name = $(this).data("filename");
+								var img = $('<img class="scheme_gallery_img" src="/tte/scheme_editor/scheme_images/'+ 
+										    name + '" width="300px" height="200px" />');
+								previewElement.append(img);
+
+							},
+							function(ui,event) 
+							{
+								previewElement.find("img").remove();
+								previewElement.css("display", "none");	
+							}
+						);
+						current_row.find('div[name="schema_img_name"]').bind('click', function(ui,event)
 						{
+							var schema_img_filename = $(this).data("filename");
+							
 							schemes_gallery.remove();
-							new_scheme_creator.displayPreviewMode($(this).attr('src'));
+							new_scheme_creator.displayPreviewMode('/tte/scheme_editor/scheme_images/' + schema_img_filename);
 						});
-						schemes_gallery.append(current_row);
+						sg_table.append(current_row);
 						new_line_counter = 0;
 					}
 				}
+								
 				spec.editor_workspace.append(schemes_gallery);
 			});
 		}
 		
+		function createPreviewElement() 
+		{
+			var pe = $('<div class="preview_img"></div>');
+			pe.css("display", "none");
+			return pe;
+		}
 		
 		/**
 		 *  Отображение режима предпросмотра после того, как из галлереи выбрано изображение.

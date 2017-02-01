@@ -3,3 +3,9 @@ Task1:
 2. Implements xml schemas names sorting.
 
 Already spent 3 hours
+
+Task2 + 3:
+1. Change schema images in 'create new schema mode'. Instead of small images leave schema image name.
+2. When cursor on schema image name show it's small representation new the link.
+
+Already spent 5 hours

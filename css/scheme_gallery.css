@@ -15,12 +15,11 @@
 }
 
 
-img.scheme_gallery_img
+div.scheme_gallery_img
 {
 	border: 1px solid #000;
 	cursor: pointer;
 }
-
 
 #preview_mode
 {
