@@ -1,5 +1,5 @@
 <?php
-/*bob*/	$myFile = 'C:\\programs\\httpd\\Apache2\\htdocs\\tte\\scheme_editor\\scheme_xmls\\'.$_POST['scheme_name'].'.xml';
+/*bob*/	$myFile = '/var/www/html/tte/scheme_editor/scheme_xmls/'.$_POST['scheme_name'].'.xml';
 	echo $myFile;
 	$fh = fopen($myFile, 'w');
    	fwrite($fh, $_POST['xml_config']);
