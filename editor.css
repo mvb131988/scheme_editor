@@ -267,7 +267,7 @@ div.aq001_cell
 div.dq001_element
 {
 	position: absolute;
-	left: 178px;
+	left: 50px;
 	top: 50px;
 	width: 30px;
 	height: 25px;
@@ -283,6 +283,30 @@ span.dq001_label
 }
 
 div.dq001_cell
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
+}
+
+/******************************************************************************/
+/*******************************************************************************
+ *  link palette element
+ ******************************************************************************/
+ 
+div.link_element
+{
+	position: absolute;
+	left: 150px;
+	top: 45px;
+	width: 30px;
+	height: 25px;
+	border: 1px solid #063;
+	background-color: #FFF;
+}
+
+div.link_cell
 {
 	position: absolute;
 	left: 0px;

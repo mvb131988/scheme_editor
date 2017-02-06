@@ -208,7 +208,7 @@ $(document).ready(function(){
 		 */
 		img_select_input.loadImgGallery = function()
 	    {
-			var element_type = spec.uid.substring(0,5);
+			var element_type = spec.uid.startsWith('link') ? spec.uid.substring(0,4) : spec.uid.substring(0,5);
 			$.post('php/getImgList.php', {element_type: element_type}, function(data){
 				var imgs_path = data.split('\n');
 				var gallery_str = '<div id="img_gallery_plugin"><table border="1" width="100%">';
@@ -542,6 +542,12 @@ $(document).ready(function(){
 												  scheme: spec.scheme,
 												  palette_element: palette_element,
 												  doc_click_controller: spec.doc_click_controller});
+				},
+				'link': function(){
+					return constructLinkElement({id: element_id,
+												 scheme: spec.scheme,
+												 palette_element: palette_element,
+												 doc_click_controller: spec.doc_click_controller});
 				}
 			};										
 			
@@ -552,13 +558,13 @@ $(document).ready(function(){
 		return palette_element;
 	}
 	
-	
 	constructPaletteElement.ai001 = 'ai001';	
 	constructPaletteElement.di001 = 'di001';
 	constructPaletteElement.di002 = 'di002';
 	constructPaletteElement.di003 = 'di003';
 	constructPaletteElement.aq001 = 'aq001';
 	constructPaletteElement.dq001 = 'dq001';
+	constructPaletteElement.palette_link = 'link'; 
 	
 	/********************************** constructPaletteElement *************************************
 	************************************************************************************************/
@@ -1336,6 +1342,24 @@ $(document).ready(function(){
 						 '<input id="' + mode2_id + '" class="mode"/></td></tr></table>';
 		element._element_menu.createModeRow(mode_table, mode1_id, mode2_id, '1g', '0g');
 		
+		return element._element_menu;
+	}
+	
+	
+	/********************************** constructDq001ElementMenu ***********************************
+	************************************************************************************************/
+	
+	
+	/***********************************************************************************************
+	 *	Конструктор меню для элемента LinkElementMenu. 
+	 ***********************************************************************************************/
+	
+	function constructLinkElementMenu(element)
+	{	
+		element._element_menu.createInputRow('color');
+		element._element_menu.createInputRow('name');
+        element._element_menu.createInputRow('href');
+        element._element_menu.createInputRow('target');
 		return element._element_menu;
 	}
 	
@@ -2459,6 +2483,78 @@ $(document).ready(function(){
 	
 	
 	/************************************************************************************************
+	 *	Конструктор элемента типа link.
+	 *  spec = {id, scheme, palette_element}, где id - id элемента,  
+	 *										  scheme - объект отображение схемы,
+	 *										  palette_element - элемент палитры(управляет id 
+	 *																			элементов схемы)
+	 ***********************************************************************************************/
+	
+	function constructLinkElement(spec)
+	{
+		var link_element = constructElement(spec);	
+		
+		//check what is param type
+		link_element.setSimpleValue('paramType', 'link'); 
+		link_element.setSimpleValue('uid', 'link' + spec.id);
+		link_element._img_element.attr('id', link_element.getSimpleValue('uid'))
+								 .attr('src', 'palette/link_palette.gif');
+		link_element._element_menu = constructElementMenu(link_element);
+		
+		/**
+		 *  Переопределение метода базового класса.
+		 */
+		var parent_getPropertiesInObject = link_element.getPropertiesInObject; 					
+		link_element.getPropertiesInObject = function()
+		{
+			var properties = parent_getPropertiesInObject();
+			properties.color = {property: link_element.getSimpleValue('color'), 
+							    type:constructElementMenu.InputElement,
+							    setter: link_element.setSimpleValue};
+			properties.name = {property: link_element.getSimpleValue('name'), 
+							   type:constructElementMenu.InputElement,
+							   setter: link_element.setSimpleValue};							
+			properties.href = {property: link_element.getSimpleValue('href'), 
+							   type:constructElementMenu.InputElement,
+							   setter: link_element.setSimpleValue};		
+			properties.target = {property: link_element.getSimpleValue('target'), 
+							     type:constructElementMenu.InputElement,
+							     setter: link_element.setSimpleValue};	
+			return properties;					   
+		}
+		
+		link_element._element_properties.push({color: "white"});
+		link_element._element_properties.push({name: null});
+		link_element._element_properties.push({href: null});
+		link_element._element_properties.push({target: null});
+		
+		/**
+		 *  Собственное событие для каждого конкретного типа элемента.
+		 *  Вызывается из обработчика события 'click' на элементе.
+		 *  Выполняет вывод значений свойств уникальных для данного типа элемента.
+		 */
+		link_element._img_element.bind('element_click', function(event){											  
+			link_element._element_menu.setInputValue('color', 
+													 link_element.getSimpleValue('color'));
+			link_element._element_menu.setInputValue('name', 
+													 link_element.getSimpleValue('name'));
+			link_element._element_menu.setInputValue('href', 
+													 link_element.getSimpleValue('href'));
+			link_element._element_menu.setInputValue('target', 
+													 link_element.getSimpleValue('target'));
+		});
+		
+		link_element._element_menu = constructLinkElementMenu(link_element);
+		
+		return link_element;
+	}
+	
+	
+	/********************************** constructDq001Element ***************************************
+	************************************************************************************************/
+	
+	
+	/************************************************************************************************
 	* Класс предназначен для описания узла Xml документа. 
 	* spec.name - имя узла.
 	************************************************************************************************/
@@ -2620,7 +2716,8 @@ $(document).ready(function(){
 											xml_constructor.constructSimpleElementSubtree,
 											xml_constructor.constructSimpleElementSubtree,
 											xml_constructor.constructAq001Subtree,
-											xml_constructor.constructDq001Subtree
+											xml_constructor.constructDq001Subtree,
+											xml_constructor.constructLinkSubtree
 								  		  ];
 			
 			for(var i=0; i<constructElementSubtree.length; i++)
@@ -2816,6 +2913,34 @@ $(document).ready(function(){
 			return control_element_node;
 		}
 		
+		/** 
+		 *	Построение поддерева документа, описывающего элемент типа link. 
+		 *  element - элемент типа link.
+		 */
+		xml_constructor.constructLinkSubtree = function(element) 
+		{
+			var display_element_node = xml_constructor.constructDisplayElementNode(element);
+			
+			var link_node = constructXmlNode({name: 'linkElement'});
+			
+			var properties = element.getProperties();
+			
+			link_node.addParameter('color', properties[8]['color']);
+			
+			var name = constructXmlNode({name: 'name'});
+			name.setValue(element.getSimpleValue('name'));
+			var href = constructXmlNode({name: 'href'});
+			href.setValue(element.getSimpleValue('href'));
+			var target = constructXmlNode({name: 'target'});
+			target.setValue(element.getSimpleValue('target'));
+			
+			link_node.addChild(name);
+			link_node.addChild(href);
+			link_node.addChild(target);
+			
+			display_element_node.addChild(link_node);
+			return display_element_node;
+		}
 		
 		/** 
 		 *	Построение поддерева документа, описывающего элемент c простой структурой.
@@ -3839,39 +3964,28 @@ $(document).ready(function(){
 		'<div id="elements_palette_label">Палитра инструментов</div>' +
 		'<div id="elements_palette" class="elements_palette">' +
             '<div id="ai001_element" class="ai001_element">' +
-                //'<span id="ai001_label">Analog Input 1</span>' +
                 '<div id="ai001_cell" class="ai001_cell">' +
                     '<img id="ai001_img" src="palette/warning.gif" />' +
                 '</div>' +
             '</div>'+
             '<div id="di001_element" class="di001_element">' +
-                //'<span id="di001_label">Discrete Input 1</span>' +
                 '<div id="di001_cell" class="di001_cell">' +
                     '<img id="di001_img" src="palette/0n.gif" />' +
                 '</div>' +
             '</div>' +
-//            '<div id="di002_element" class="di002_element">' +
-//                //'<span id="di002_label">Discrete Input 2</span>' +
-//                '<div id="di002_cell" class="di002_cell">' +
-//                    '<img id="di002_img" src="palette/pump_off.gif" />' +
-//                '</div>' +
-//            '</div>' +
-//             '<div id="di003_element" class="di003_element">' +
-//                //'<span id="di003_label" class="di003_label">Discrete Input 3</span>' +
-//                '<div id="di003_cell" class="di003_cell">' +
-//                    '<img id="di003_img" src="palette/di003_palette.gif" />' +
-//                '</div>' +
-//            '</div>' +
 			'<div id="aq001_element" class="aq001_element">' +
-                //'<span id="aq001_label" class="aq001_label">New Analog 1</span>' +
                 '<div id="aq001_cell" class="aq001_cell">' +
                     '<img id="aq001_img" src="palette/aq001_palette.gif" />' +
                 '</div>' +
             '</div>' +
 			'<div id="dq001_element" class="dq001_element">' +
-                //'<span id="dq001_label" class="dq001_label">New Discrete 1</span>' +
                 '<div id="dq001_cell" class="dq001_cell">' +
                     '<img id="dq001_img" src="palette/dq001_palette.gif" />' +
+                '</div>' +
+            '</div>' +
+			'<div id="link_element" class="link_element">' +
+                '<div id="link_cell" class="link_cell">' +
+                    '<img id="link_img" src="palette/link_palette.gif" />' +
                 '</div>' +
             '</div>' +
         '</div>'); 
@@ -3893,6 +4007,7 @@ $(document).ready(function(){
 		var palette_di003 = null;
 		var palette_aq001 = null;
 		var palette_dq001 = null;
+		var palette_link = null;
 		
 		/** Объект управляет обработчиками события click на документе. */
 		var doc_click_controller = constructDocumentClickController();
@@ -3961,14 +4076,15 @@ $(document).ready(function(){
 			 scheme_elements.push({type: 'di003', elements: palette_di003.getSchemeElements()});
 			 scheme_elements.push({type: 'aq001', elements: palette_aq001.getSchemeElements()});
 			 scheme_elements.push({type: 'dq001', elements: palette_dq001.getSchemeElements()});
+			 scheme_elements.push({type: 'link',  elements: palette_link.getSchemeElements()});
 			 var xml_constructor = constructXmlConstructor({scheme_title: scheme.getTitle(),
 															scheme_path: scheme.getImgPath(),
 														    scheme_elements: scheme_elements});
 			 xml_constructor.constructDocumentTree();
 			 var xml_document_string = xml_constructor.getXmlDocumentString(); 
 					
-/*bob*/			 $.post('/tte/scheme_editor/php/saveSchemeXml.php', {scheme_name: scheme.getTitle(), 
-															 xml_config: xml_document_string},
+/*bob*/		 $.post('/tte/scheme_editor/php/saveSchemeXml.php', {scheme_name: scheme.getTitle(), 
+																 xml_config: xml_document_string},
 					 function(data){
 						 spec.editor_controller.showNotification('Файл успешно сохранен');
 					 });
@@ -4042,6 +4158,10 @@ $(document).ready(function(){
 													 element_type: constructPaletteElement.dq001,
 													 scheme: scheme,
 													 doc_click_controller: doc_click_controller});
+			palette_link = constructPaletteElement({elements_palette: elements_palette, 
+													element_type: constructPaletteElement.palette_link,
+													scheme: scheme,
+													doc_click_controller: doc_click_controller});
 		}
 		
 		

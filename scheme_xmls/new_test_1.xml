@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scheme schemeTitle="new_test_1">
+  <elementTypes>
+    <type>ai001</type>
+    <type>link</type>
+  </elementTypes>
+  <imagePath>/tte/scheme_editor/scheme_images/10t.png</imagePath>
+  <displayElement paramType="ai001" uid="ai0011" paramName="" textName="" description="" top="182" left="54" defImgPath="">
+    <ai001 color="white">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLr="false" depLb="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLrVal="" depLbVal=""/>
+      <precision>1</precision>
+      <unit/>
+    </ai001>
+  </displayElement>
+  <displayElement paramType="link" uid="link1" paramName="" textName="" description="" top="393" left="111" defImgPath="">
+    <linkElement color="white">
+      <name>n1</name>
+      <href>h1</href>
+      <target>t1</target>
+    </linkElement>
+  </displayElement>
+  <displayElement paramType="link" uid="link2" paramName="" textName="" description="" top="475" left="93" defImgPath="">
+    <linkElement color="white2">
+      <name>n2</name>
+      <href>h2</href>
+      <target>t2</target>
+    </linkElement>
+  </displayElement>
+  <displayElement paramType="link" uid="link3" paramName="" textName="" description="" top="548" left="149" defImgPath="">
+    <linkElement color="white3">
+      <name>n3</name>
+      <href>h3</href>
+      <target>t3</target>
+    </linkElement>
+  </displayElement>
+</scheme>
