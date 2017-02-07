@@ -13,22 +13,22 @@
       <unit/>
     </ai001>
   </displayElement>
-  <displayElement paramType="link" uid="link1" paramName="" textName="" description="" top="393" left="111" defImgPath="">
+  <displayElement paramType="link" uid="link1" paramName="" textName="" description="" top="474" left="94" defImgPath="">
     <linkElement color="white">
       <name>n1</name>
       <href>h1</href>
       <target>t1</target>
     </linkElement>
   </displayElement>
-  <displayElement paramType="link" uid="link2" paramName="" textName="" description="" top="475" left="93" defImgPath="">
-    <linkElement color="white2">
+  <displayElement paramType="link" uid="link2" paramName="pn2" textName="tN2" description="d2" top="378" left="171" defImgPath="..\..\..\hmi\elements\q\aq001\img\link\u.gif">
+    <linkElement color="white">
       <name>n2</name>
       <href>h2</href>
       <target>t2</target>
     </linkElement>
   </displayElement>
-  <displayElement paramType="link" uid="link3" paramName="" textName="" description="" top="548" left="149" defImgPath="">
-    <linkElement color="white3">
+  <displayElement paramType="link" uid="link3" paramName="" textName="" description="" top="401" left="41" defImgPath="">
+    <linkElement color="white">
       <name>n3</name>
       <href>h3</href>
       <target>t3</target>

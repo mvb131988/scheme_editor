@@ -3318,6 +3318,32 @@ $(document).ready(function(){
 		}
 		
 		
+		/**
+		 *  Восстанавление на схеме элемента типа link.
+		 */
+		xml_scheme_parser.recoverLinkElements = function()
+		{
+			var elements_nodes = spec.xml_document.find('displayElement[paramType = "link"]');
+			for(var i=0; i<elements_nodes.length; i++)
+			{
+				var link_element = constructLinkElement({id: ($(elements_nodes[i]).attr('uid')).substr(4),
+														 scheme: scheme,
+														 palette_element: palette_elements[6],
+														 doc_click_controller: spec.doc_click_controller});
+				xml_scheme_parser.recoverDisplayElement(link_element, $(elements_nodes[i]), palette_elements[6]);
+				
+				var name = $(elements_nodes[i]).find('name');
+				link_element.setSimpleValue('name', name.text());
+				var href = $(elements_nodes[i]).find('href');
+				link_element.setSimpleValue('href', href.text());
+				var target = $(elements_nodes[i]).find('target');
+				link_element.setSimpleValue('target', target.text());
+				
+				palette_elements[6].addElement(link_element);
+			}
+		}
+		
+		
 		return xml_scheme_parser;
 	}
 	
@@ -4029,7 +4055,8 @@ $(document).ready(function(){
 					  edit_mode_loader.enableEditMode();
 					  xml_scheme_parser.setPaletteElements([palette_ai001, palette_di001,
 															palette_di002, palette_di003,
-															palette_aq001, palette_dq001]);
+															palette_aq001, palette_dq001,
+															palette_link]);
 					  
 					  var used_elements_types = xml_scheme_parser.getUsedTypes();
 					  if(used_elements_types.length != 0)
@@ -4041,7 +4068,8 @@ $(document).ready(function(){
 							di002: xml_scheme_parser.recoverDi002Elements,
 							di003: xml_scheme_parser.recoverDi003Elements,
 							aq001: xml_scheme_parser.recoverAq001Elements,
-							dq001: xml_scheme_parser.recoverDq001Elements
+							dq001: xml_scheme_parser.recoverDq001Elements,
+							link:  xml_scheme_parser.recoverLinkElements
 						 };
 						 for(var i=0; i<used_elements_types.length; i++)
 						 {
