@@ -3491,88 +3491,107 @@ $(document).ready(function(){
 		 */
 		new_scheme_creator.displaySchemeGallery = function()
 		{
-/*bob*/			$.post('/tte/scheme_editor/php/getSchemeImagesList.php', function(data){
+/*bob*/		$.post('/tte/scheme_editor/php/getSchemeImagesList.php', function(data){
 				var file_names = data.split('\n');
+				sortXmlSchemesList(file_names);
 				
-				schemes_gallery = $('<div>');
-				var previewElement = createPreviewElement();
-				schemes_gallery.append(previewElement);
+				schemes_gallery = $('<div width="100%" style="margin-top:50px">');
+				schemes_gallery.append(createCell.previewElement);
 				
-				// schemes gallery table container
-				var sg_table = $('<table id="schemes_gallery" align="center" width="100%" cellpadding="10px">')
-				schemes_gallery = schemes_gallery.append(sg_table);
-				
-				var new_line_counter = 0;
-				var current_row = null;
-				for(var i=0; i<file_names.length-1; i++)
-				{
-					new_line_counter++;
-					if(new_line_counter == 1)
-					{
-						current_row = $('<tr>');
-					}
-/*bob*/					var current_cell = $(
-							'<td align="center">' +
-								'<div name="schema_img_name" style="display:inline-block" class="scheme_gallery_img">' +
-								 file_names[i] + 
-								'</div></td>' +
-							'</td>'	
-							// +
-							// '<img class="scheme_gallery_img" src="/tte/scheme_editor/scheme_images/'+ 
-							// file_names[i] + '" width="300px" height="200px" /></td>'
-						);
-						current_cell.find("div").data("filename", file_names[i]);
-						current_row.append(current_cell);
-					if((new_line_counter == 3)||(i == file_names.length-2))
-					{
-						current_row.find('div[name="schema_img_name"]').hover( 
-							function(ui,event) 
-							{
-								var offset = $(this).offset();
-								var offsetX = offset.left;
-								var offsetY = offset.top;
-								
-								var x = offsetX + $(this).width();
-								var y = offsetY + $(this).height();
-								
-								previewElement.css("display", "block");	
-								previewElement.css("position", "absolute");
-								previewElement.css("top", y); 
-								previewElement.css("left", x);
-								
-								var name = $(this).data("filename");
-								var img = $('<img class="scheme_gallery_img" src="/tte/scheme_editor/scheme_images/'+ 
-										    name + '" width="300px" height="200px" />');
-								previewElement.append(img);
+				var images_table = createSchemesTable(file_names, 5, createCell);
+				schemes_gallery.append(images_table);
 
-							},
-							function(ui,event) 
-							{
-								previewElement.find("img").remove();
-								previewElement.css("display", "none");	
-							}
-						);
-						current_row.find('div[name="schema_img_name"]').bind('click', function(ui,event)
-						{
-							var schema_img_filename = $(this).data("filename");
-							
-							schemes_gallery.remove();
-							new_scheme_creator.displayPreviewMode('/tte/scheme_editor/scheme_images/' + schema_img_filename);
-						});
-						sg_table.append(current_row);
-						new_line_counter = 0;
-					}
-				}
-								
 				spec.editor_workspace.append(schemes_gallery);
 			});
 		}
 		
+		/**
+		 *	Create cell, with all necessary event handlers, to hold scheme image element.   
+		 *
+		 *	file_name - scheme image file name in format 'name.extension'
+		 *  previewElement - div preview element for minimalistic scheme image
+		 */
+		function createCell(file_name) {
+			
+			var current_cell = $(
+				'<td align="center">' +
+					'<div name="schema_img_name" style="display:inline-block" class="scheme_gallery_img">' +
+					 file_name.substr(0, file_name.indexOf('.')) + 
+					'</div></td>' +
+				'</td>'	
+			);
+			
+			var current_div = current_cell.find("div");
+			current_div.data("filename", file_name);
+			
+			current_div.hover( 
+				function(ui,event) 
+				{
+					var offset = $(this).offset();
+					var offsetX = offset.left;
+					var offsetY = offset.top;
+					
+					var x = offsetX + $(this).width();
+					var y = offsetY + $(this).height();
+					
+					createCell.previewElement.css("display", "block");	
+					createCell.previewElement.css("position", "absolute");
+					createCell.previewElement.css("top", y); 
+					createCell.previewElement.css("left", x);
+					
+					var name = $(this).data("filename");
+					var img = $('<img class="scheme_gallery_img" src="/tte/scheme_editor/scheme_images/'+ 
+								name + '" width="300px" height="200px" />');
+					createCell.previewElement.append(img);
+
+				},
+				function(ui,event) 
+				{
+					createCell.previewElement.find("img").remove();
+					createCell.previewElement.css("display", "none");	
+				}
+			);
+			
+			current_div.bind('click', function(ui,event) {
+					var schema_img_filename = $(this).data("filename");
+					
+					schemes_gallery.remove();
+					new_scheme_creator.displayPreviewMode('/tte/scheme_editor/scheme_images/' + schema_img_filename);
+			});
+			
+			return current_cell;
+		}
+		
+		//Assign priview element objest to a function parameter to a function
+		createCell.previewElement = createPreviewElement();
+		
+		/**
+		 *  Initialization of preview image(minimalistic image) div block 
+		 */
 		function createPreviewElement() 
 		{
 			var pe = $('<div class="preview_img"></div>');
 			pe.css("display", "none");
+			pe.css("border", "1px solid #000");
 			return pe;
+		}
+		
+		/**
+		 *	Define an output order
+		 *  file_names - array to be sorted
+		 */
+		function sortXmlSchemesList(file_names) {
+			file_names.sort(function(a,b){
+				if(a == b) {
+					return 0;
+				}
+				if(a > b) {
+					return 1;
+				}			
+				if(a < b) {
+					return -1;
+				}					
+			});
 		}
 		
 		/**
@@ -3668,12 +3687,12 @@ $(document).ready(function(){
 					schemes_config.append(current_row);
 					
 					/** Тип input-ов(radio для открытия и checkbox для удаления). */
-					var input_type = 'radio';
-					input_type = (mode == constructSchemeChooser.deleteMode ? 'checkbox' : input_type);
+					createCell.inputType = (mode == constructSchemeChooser.deleteMode ? 'checkbox' : 'radio');
 					
 					// Set the default value. It's assumed, that the column_value is static.
 					var column_count = 8;
-					var schemes_table = internallyDisplayXmlSchemesList(file_names, column_count, input_type);
+					var schemes_table = createSchemesTable(file_names, column_count, createCell);
+					
 					// UI preparation to insert xml schemes table into container UI elements
 					var schemes_table_row_container = $('<tr></tr>');
 					var schemes_table_cell_container = $('<td></td>');
@@ -3726,61 +3745,18 @@ $(document).ready(function(){
 			});
 		}
 		
-		/**
-		 *  Display xml schemes list in the table
-		 *	file_names - array of schema xml file names
-		 *	column_count - number of columns in the output table
-		 *  input_type - radio/checkbox type of the ui elements depends on open/delete mode of the editor
-		 *	
-		 *	returns jQuery object representing xml schemes list in the table
-		 */
-		function internallyDisplayXmlSchemesList(file_names, column_count, input_type) {
-			var schemes_table = $('<table id="schemes_list_as_table" border="1" cellpadding="5">');
-			
-			var start = 0;
-			var stop = column_count;
-			
-			while(stop<file_names.length) {
-				var row = $('<tr>');
-				
-				for(var i=start; i < stop; i++) {
-					// skip empty names if such exist
-					if(file_names[i]) {
-						var scheme_name = file_names[i].substr(0, file_names[i].indexOf('.'));
-						var cell = $('<td><input type="' + input_type + '" name="schemes" id = "' + scheme_name + 
-									 '" class="scheme_selector" />' + scheme_name + '</td>');
-						row.append(cell);
-					}
-				}
-				schemes_table.append(row);
-				
-				start = stop;
-				stop = stop + column_count;
-			}
-			
-			// create the last row
-			if(start < file_names.length) {
-				var row = $('<tr>');
-				
-				for(var i=0; i < column_count; i++) {
-					if((start + i < file_names.length) && (file_names[start + i])) {
-						var scheme_name = file_names[start + i].substr(0, file_names[start + i].indexOf('.'));
-						var cell = $('<td><input type="' + input_type + '" name="schemes" id = "' + scheme_name + 
-									 '" class="scheme_selector" />' + scheme_name + '</td>');
-						row.append(cell);
-					} 
-					else {
-						var cell = $('<td>');
-						row.append(cell);
-					}
-				}
-				
-				schemes_table.append(row);
-			}
-			
-			return schemes_table;
+		function createCell(file_name) {
+			var scheme_name = file_name.substr(0, file_name.indexOf('.'));
+			var cell = $('<td><input type="' + createCell.inputType + '" name="schemes" id = "' + scheme_name + 
+						 '" class="scheme_selector" />' + scheme_name + '</td>');
+			return cell;
 		}
+	
+	
+		// Declare input type of the cell. Assignment is happenening in the 'displayXmlSchemesList' method
+		createCell.inputType = null;
 		
+	
 		/**
 		 *	Define an output order
 		 *  file_names - array to be sorted
@@ -3798,6 +3774,7 @@ $(document).ready(function(){
 				}					
 			});
 		}
+		
 		
 		/**
          *  Отключение режима выбора мнемосхемы.   		
@@ -4074,5 +4051,62 @@ $(document).ready(function(){
 		
 	})();
 
+	
+	/************************************************************************************************
+	 *	Start of util section. Generic functions that can be used in different modules of the system.
+	 ************************************************************************************************/
+	
+	/**
+	 *  Display xml schemes list(OPEN/DELETE modes) as well as image scheme list(CREATE_NEW)SCHEME mode) 
+	 *	in the table
+	 *	file_names - array of (schema xml/schema image) file names
+	 *	column_count - number of columns in the output table
+	 *  createCell - function, that returns jQuery object representing single cell
+	 *	
+	 *	returns jQuery object representing xml schemes list in the table
+	 */
+	function createSchemesTable(file_names, column_count, createCell) {
+		var schemes_table = $('<table id="schemes_list_as_table" border="1" cellpadding="5" align="center">');
+		
+		var start = 0;
+		var stop = column_count;
+		
+		while(stop<file_names.length) {
+			var row = $('<tr>');
+			
+			for(var i=start; i < stop; i++) {
+				// skip empty names if such exist
+				if(file_names[i]) {
+					var cell = createCell(file_names[i]);
+					row.append(cell);
+				}
+			}
+			schemes_table.append(row);
+			
+			start = stop;
+			stop = stop + column_count;
+		}
+		
+		// create the last row
+		if(start < file_names.length) {
+			var row = $('<tr>');
+			
+			for(var i=0; i < column_count; i++) {
+				if((start + i < file_names.length) && (file_names[start + i])) {
+					var cell = createCell(file_names[start + i]);
+					row.append(cell);
+				} 
+				else {
+					var cell = $('<td>');
+					row.append(cell);
+				}
+			}
+			
+			schemes_table.append(row);
+		}
+		
+		return schemes_table;
+	}
+	
 	
 });
