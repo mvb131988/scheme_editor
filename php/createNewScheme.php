@@ -1,5 +1,5 @@
 <?php
-/*bob*/	$dir = 'C:\\programs\\httpd\\Apache2\\htdocs\\tte\\scheme_editor\\scheme_xmls\\';
+/*bob*/	$dir = '/var/www/html/tte/scheme_editor/scheme_xmls/';
 	$xml_name = $_POST['xml_name'];
 	$img_path = $_POST['img_path'];
 	
