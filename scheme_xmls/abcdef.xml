@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scheme schemeTitle="abcdef">
+  <elementTypes>
+    <type>aq001</type>
+    <type>dq001</type>
+    <type>link</type>
+  </elementTypes>
+  <imagePath>/tte/scheme_editor/scheme_images/10m.png</imagePath>
+  <controlElement paramType="aq001" uid="aq0011" paramName="" paramOutName="" textName="" description="" top="180" left="59" defImgPath="">
+    <aq001 color="">
+      <operatingRangesFlags depUb="false" depUr="false" depUy="false" depLy="false" depLb="false" depLr="false"/>
+      <operatingRanges depUbVal="" depUrVal="" depUyVal="" depLyVal="" depLbVal="" depLrVal=""/>
+      <precision/>
+      <unit/>
+    </aq001>
+  </controlElement>
+  <controlElement paramType="dq001" uid="dq0011" paramName="" paramOutName="" textName="" description="" top="311" left="74" defImgPath="">
+    <dq001>
+      <zeroStatus>norm</zeroStatus>
+      <oneStatus>norm</oneStatus>
+      <mode>0g</mode>
+    </dq001>
+  </controlElement>
+  <displayElement paramType="link" uid="link1" paramName="" textName="" description="" top="131" left="195" defImgPath="">
+    <linkElement color="white">
+      <name/>
+      <href/>
+      <target/>
+    </linkElement>
+  </displayElement>
+</scheme>

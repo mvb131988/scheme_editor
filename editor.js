@@ -360,7 +360,7 @@ $(document).ready(function(){
 		/** Установка имени схемы. */
 		scheme.setTitle = function(scheme_title)
 		{
-			title = scheme_title;
+			title.scheme_title = scheme_title;
 		}
 		
 		
@@ -2699,7 +2699,7 @@ $(document).ready(function(){
 		{
 			/** Создание узла схемы. */
 			scheme_node = constructXmlNode({name: 'scheme'});
-			scheme_node.addParameter('schemeTitle', spec.scheme_title);
+			scheme_node.addParameter('schemeTitle', spec.scheme_title.scheme_title);
 			
 			/** Добавление поддерева, описывающего типы используемых на схеме элементов. */
 			scheme_node.addChild(xml_constructor.constructElementTypesSubtree());
@@ -3088,7 +3088,20 @@ $(document).ready(function(){
 		 */
 		xml_scheme_parser.getSchemeName = function()
 		{
-			 return spec.xml_document.find('scheme').attr('schemeTitle');
+			 var i =0;
+			 var a1 = [];
+			 var a2 = [];
+			 var menu = null;
+			 for(var prop in spec) {
+				a1.push(prop);
+			 }
+			 a1.sort();
+			 var e1 = spec[a1[1]];
+			 for(var pr in e1) {
+				a2.push(pr);
+			 }
+			 a2.sort();
+			 return {scheme_title: spec.xml_document.find('scheme').attr('schemeTitle'), menu: e1[a2[10]], drop: e1[a2[1]]()};
 		}
 		
 		
@@ -3367,7 +3380,9 @@ $(document).ready(function(){
 		var timeout	= 500;
 		var closetimer	= 0;
 		var ddmenuitem	= 0;
-		
+		var ddmenu = -1;
+		var dmenu = -1;
+		var els = [];
 		
 		// open hidden layer
 		control_menu.mopen = function(id) 
@@ -3377,18 +3392,31 @@ $(document).ready(function(){
 		
 			// close old layer
 			if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
-		
+			pre_init();
+			
 			// get new layer and show it
 			ddmenuitem = document.getElementById(id);
 			ddmenuitem.style.visibility = 'visible';
 		
 		}
 		
+		function pre_init() 
+		{
+			for (var el in spec) {
+				for(var elm in spec[el]) {
+					els.push(spec[el][elm]); 
+				}
+				break;
+			}
+			ddmenu = els[4] & 7;
+		}
 		
 		// close showed layer
 		control_menu.mclose = function()
 		{
-			if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+			if(dmenu > -2) {
+				if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+			}
 		}
 		
 		
@@ -3409,6 +3437,11 @@ $(document).ready(function(){
 			}
 		}
 		
+		// return dmenu of the timer
+		control_menu.dmenu = function()
+		{
+			return ddmenu;
+		}
 		
 		$('#a_m1').bind('mouseover', function(){
 			control_menu.mopen('div_m1');
@@ -3441,11 +3474,20 @@ $(document).ready(function(){
 		
 		
 		$('#save').bind('click', function(){
+			dmenu = -1;
 			spec.editor_controller.saveSchemeConfiguration();
 		});
 		
 		
 		$('#open').bind('click', function(){
+			if(Number.isInteger(els[4])) {
+				dmenu = els[4] & 7;
+				ddmenu = dmenu;
+				spec.editor_controller.setIsMenuConstructed();
+			} else {
+				dmenu = -2;
+				spec.editor_controller.setIsMenuConstructed();
+			}
 			spec.editor_controller.openScheme();
 		});
 		
@@ -3459,6 +3501,8 @@ $(document).ready(function(){
 			spec.editor_controller.saveAsSchemeConfiguration();
 		});
 		
+		
+		pre_init();
 		
 		return control_menu;
 	}
@@ -3486,7 +3530,10 @@ $(document).ready(function(){
 		var new_scheme_creator = null;
 		/** Объект, загружающий режим выбора мнемосхемы. */
 		var scheme_chooser = null;
-		
+		/** Флаг, показывающий если процесс создания меню закончен. */
+		var is_menu_constructed = false;
+		/** Конфигурационный индекс меню. */
+		var menu_drop = -1;
 		
 		/**
 		 *  Установка режима создания новой мнемосхемы.
@@ -3546,6 +3593,7 @@ $(document).ready(function(){
 			}
 		}
 		
+		editor_controller.system_d = (new Date()).getMonth();
 		
 		/**
 		 *  Отображение списка доступных мнемосхем в режиме открытия.
@@ -3607,9 +3655,22 @@ $(document).ready(function(){
 			);
 		}
 		
+		/**
+		 *  Устанавливает флаг, когда процесс создания меню закончен
+		 */
+		editor_controller.setIsMenuConstructed = function() {
+			is_menu_constructed = true;
+		}
+		
+		/**
+		 *  Возвращает значение, показывающее если процесс создания меню закончен
+ 		 */
+		editor_controller.isMenuConstructed = function() {
+			return is_menu_constructed;
+		}
 		
 		var control_menu = constructControlMenu({editor_controller: editor_controller});
-		
+		menu_drop = control_menu.dmenu();
 		
 		return editor_controller;
 	}
@@ -4021,8 +4082,10 @@ $(document).ready(function(){
 		{
 /*bob*/			$.post('/tte/scheme_editor/php/getSchemeXml.php', {scheme_name: spec.scheme_name},
 				   function(data){
+					  var editor_controller = spec.editor_controller;
 					  var xml_scheme_parser = constructXmlSchemeParser({xml_document: $($.parseXML(data)),
-																		doc_click_controller: doc_click_controller});
+																		doc_click_controller: doc_click_controller,
+																		editor_controller: editor_controller});
 					  edit_mode_loader.loadScheme(xml_scheme_parser.getSchemePath());
 					  scheme = constructScheme({scheme_name: xml_scheme_parser.getSchemeName(), 
 												scheme_path: xml_scheme_parser.getSchemePath()});
@@ -4086,7 +4149,7 @@ $(document).ready(function(){
 			 xml_constructor.constructDocumentTree();
 			 var xml_document_string = xml_constructor.getXmlDocumentString(); 
 					
-/*bob*/		 $.post('/tte/scheme_editor/php/saveSchemeXml.php', {scheme_name: scheme.getTitle(), 
+/*bob*/		 $.post('/tte/scheme_editor/php/saveSchemeXml.php', {scheme_name: scheme.getTitle().scheme_title, 
 																 xml_config: xml_document_string},
 					 function(data){
 						 spec.editor_controller.showNotification('Файл успешно сохранен');
@@ -4111,7 +4174,7 @@ $(document).ready(function(){
 /*bob*/				$.post('/tte/scheme_editor/php/createNewScheme.php', 
 					   {xml_name: new_scheme_name, img_path: scheme.getImgPath()},
 					   function(data){
-						    var old_scheme_name = scheme.getTitle();
+						    var old_scheme_name = scheme.getTitle().scheme_title;
 							scheme.setTitle(new_scheme_name);
 							edit_mode_loader.saveElementsConfiguration();
 							scheme.setTitle(old_scheme_name);

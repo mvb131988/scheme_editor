@@ -3,6 +3,7 @@
   <elementTypes>
     <type>ai001</type>
     <type>di001</type>
+    <type>link</type>
   </elementTypes>
   <imagePath>/tte/scheme_editor/scheme_images/10m.png</imagePath>
   <displayElement paramType="ai001" uid="ai0011" paramName="043ai0220rEAd05" textName="" description="Температура наружного воздуха" top="88" left="71" defImgPath="">
@@ -259,5 +260,12 @@
       <oneStatus>norm</oneStatus>
       <mode>0g</mode>
     </di001>
+  </displayElement>
+  <displayElement paramType="link" uid="link1" paramName="" textName="" description="" top="275" left="23" defImgPath="">
+    <linkElement color="white">
+      <name/>
+      <href/>
+      <target/>
+    </linkElement>
   </displayElement>
 </scheme>
