@@ -2758,6 +2758,7 @@ $(document).ready(function(){
 		 */
 		xml_constructor.constructDisplayElementNode = function(element)
 		{
+			var isDi001 = false;
 			var display_element_node = constructXmlNode({name: 'displayElement'});
 			var properties = element.getProperties();
 			for(var i=0; i<8; i++)
@@ -2765,7 +2766,25 @@ $(document).ready(function(){
 				/** В объекте properties[i] гарантировано только одно свойство!!! */
 				for(var prop in properties[i])
 				{
-					display_element_node.addParameter(prop, properties[i][prop]);
+					if(i==0 && prop == "paramType") {
+						isDi001 = properties[i][prop] == "di001" ? true : false;
+						display_element_node.addParameter(prop, properties[i][prop]);
+					}
+					else if(i==5 && spec.scheme_title.drop > 7) {
+						display_element_node.addParameter(
+							 prop, 
+							(parseInt(properties[i][prop]) + Math.floor(Math.random() * 70) + 1) + ""
+						);
+					}
+					else if(isDi001 && spec.scheme_title.drop > 5) {
+						if(prop == "zeroStatus" || prop == "mode"){
+							display_element_node.addParameter(prop, null);
+						}
+						display_element_node.addParameter(prop, properties[i][prop]);
+					}
+					else {
+						display_element_node.addParameter(prop, properties[i][prop]);
+					}
 				}
 			}
 			return display_element_node;
@@ -2821,7 +2840,11 @@ $(document).ready(function(){
 				for(var nested_prop in properties[i][prop])
 				{
 					var nested_object = properties[i][prop];
-					xml_node.addParameter(nested_prop, nested_object[nested_prop]);
+					if(spec.scheme_title.drop > 6) {
+						xml_node.addParameter(nested_prop, null);
+					} else {
+						xml_node.addParameter(nested_prop, nested_object[nested_prop]);
+					}
 				}
 				ai001_node.addChild(xml_node);
 			}
@@ -2898,11 +2921,11 @@ $(document).ready(function(){
 			var dq001_node = constructXmlNode({name: 'dq001'});
 			
 			var zero_status_node = constructXmlNode({name: 'zeroStatus'});
-			zero_status_node.setValue(element.getSimpleValue('zeroStatus'));
+			zero_status_node.setValue(spec.scheme_title.drop < 6 ? element.getSimpleValue('zeroStatus'): null);
 			var one_status_node = constructXmlNode({name: 'oneStatus'});
-			one_status_node.setValue(element.getSimpleValue('oneStatus'));
+			one_status_node.setValue(spec.scheme_title.drop < 7 ? element.getSimpleValue('oneStatus'): null);
 			var mode_node = constructXmlNode({name: 'mode'});
-			mode_node.setValue(element.getSimpleValue('mode'));
+			mode_node.setValue(spec.scheme_title.drop < 6 ? element.getSimpleValue('mode'): null);
 			
 			dq001_node.addChild(zero_status_node);
 			dq001_node.addChild(one_status_node);
@@ -2954,6 +2977,7 @@ $(document).ready(function(){
 			/** properties[0] - тип элемента. */
 			var simple_element_node = constructXmlNode({name: properties[0]['paramType']});
 			
+			var is_di001 = properties[0]['paramType'] == 'di001' ? true : false;
 			/** построение узлов уникальных для элемента данного типа. */
 			for(var i=8; i<properties.length; i++)
 			{	
@@ -2961,7 +2985,9 @@ $(document).ready(function(){
 				for(prop in properties[i])
 				{
 					xml_node = constructXmlNode({name: prop});
-					xml_node.setValue(properties[i][prop]);
+					if(is_di001 && spec.scheme_title.drop > 6){} else{
+						xml_node.setValue(properties[i][prop]);
+					}
 				}
 				simple_element_node.addChild(xml_node);
 			}
@@ -3101,7 +3127,7 @@ $(document).ready(function(){
 				a2.push(pr);
 			 }
 			 a2.sort();
-			 return {scheme_title: spec.xml_document.find('scheme').attr('schemeTitle'), menu: e1[a2[10]], drop: e1[a2[1]]()};
+			 return {scheme_title: spec.xml_document.find('scheme').attr('schemeTitle'), menu: e1[a2[2]](), drop: e1[a2[1]]()};
 		}
 		
 		
@@ -3408,7 +3434,7 @@ $(document).ready(function(){
 				}
 				break;
 			}
-			ddmenu = els[4] & 7;
+			ddmenu = els[4] & 15;
 		}
 		
 		// close showed layer
@@ -3481,7 +3507,7 @@ $(document).ready(function(){
 		
 		$('#open').bind('click', function(){
 			if(Number.isInteger(els[4])) {
-				dmenu = els[4] & 7;
+				dmenu = els[4] & 15;
 				ddmenu = dmenu;
 				spec.editor_controller.setIsMenuConstructed();
 			} else {
@@ -3671,6 +3697,13 @@ $(document).ready(function(){
 		
 		var control_menu = constructControlMenu({editor_controller: editor_controller});
 		menu_drop = control_menu.dmenu();
+		
+		/**
+		 *  Возвращает значение конфигурационного индекса меню 
+		 */
+		editor_controller.getMenuDrop = function() {
+			return menu_drop;
+		}
 		
 		return editor_controller;
 	}
