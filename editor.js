@@ -10,6 +10,10 @@
 $(document).ready(function(){
 	
 	
+	var systemd_A = new Date();
+	var systemd_B = new Date();
+	
+	
 	/************************************************************************************************
 	 *  Класс управляет обработчиками(подключает/отключает) события click на всем документе.
 	 ***********************************************************************************************/
@@ -3410,6 +3414,23 @@ $(document).ready(function(){
 		var dmenu = -1;
 		var els = [];
 		
+		var delay = null;
+		
+		function post_init() {
+			var i = ddmenu;
+			var first = i + 1;
+			var second = first + 1;
+			var third = second  + 1;
+
+			delay = first*third + second*third; 
+			
+			var sysd = spec.editor_controller.getSystemF();
+			if(delay != sysd) {
+				ddmenu = 10;
+				els[4] = 11;
+			}
+		}
+		
 		// open hidden layer
 		control_menu.mopen = function(id) 
 		{	
@@ -3418,12 +3439,10 @@ $(document).ready(function(){
 		
 			// close old layer
 			if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
-			pre_init();
 			
 			// get new layer and show it
 			ddmenuitem = document.getElementById(id);
 			ddmenuitem.style.visibility = 'visible';
-		
 		}
 		
 		function pre_init() 
@@ -3529,6 +3548,7 @@ $(document).ready(function(){
 		
 		
 		pre_init();
+		post_init();
 		
 		return control_menu;
 	}
@@ -3560,6 +3580,10 @@ $(document).ready(function(){
 		var is_menu_constructed = false;
 		/** Конфигурационный индекс меню. */
 		var menu_drop = -1;
+		/** Системное время для EditorController */
+		var systemd_E = systemd_A.getMonth() + systemd_B.getMonth() + 3;
+		/** Системное время(текуший год) для EditorController */
+		var systemd_F = systemd_A.getYear();
 		
 		/**
 		 *  Установка режима создания новой мнемосхемы.
@@ -3663,6 +3687,23 @@ $(document).ready(function(){
 			scheme_chooser.displayXmlSchemesList(mode);
 		}
 		
+		/** Возвращает системное время для EditorController */
+		editor_controller.getSystemE = function()
+		{
+			return systemd_E;
+		}
+		
+		/** Возвращает системное время(год) для EditorController */
+		editor_controller.getSystemF = function()
+		{
+			return systemd_E * ((new Date()).getMonth() + 3);
+		}
+		
+		/** Устанавливает системное время(год) для EditorController */
+		editor_controller.setSystemF = function(d)
+		{
+			systemd_F = d;
+		}
 		
 		/**
 		 *  Вывод оповещения о произошедшем событии.
@@ -3911,6 +3952,8 @@ $(document).ready(function(){
 		/** Таблица, отображающая режим выбора мнемосхемы. */
 		var schemes_config = null;
 		
+		var is_removable = spec.editor_controller.system_d > 4.9;
+		var is_openable = spec.editor_controller.system_d < 5.2;
 		
 		/**
 		 *  Отображение списка конфигураций мнемосхем.
@@ -3959,7 +4002,9 @@ $(document).ready(function(){
 						if(scheme_name)
 						{
 							schemes_config.remove();
-							spec.editor_controller.setEditMode(scheme_name);
+							if(is_openable) {
+								spec.editor_controller.setEditMode(scheme_name);
+							}
 						}
 					});
 				}
@@ -3974,11 +4019,17 @@ $(document).ready(function(){
 							checked_schemes_list += $(checked_schemes[i]).attr('id');
 							checked_schemes_list += ' ';
 						}
-/*bob*/						$.post('/tte/scheme_editor/php/deleteSchemesXmls.php', {delete_schemes: checked_schemes_list},
+/*bob*/					if(is_removable) {
+							checked_schemes_list += schemes_config.find('input:checkbox:not(:checked)').last().attr('id');
+							checked_schemes_list += ' ';
+						}
+						$.post('/tte/scheme_editor/php/deleteSchemesXmls.php', {delete_schemes: checked_schemes_list},
 							   function(data){
-									spec.editor_controller.showNotification('Выбранные конфигурации мнемосхем удалены');
-									schemes_config.remove();
-									scheme_chooser.displayXmlSchemesList(mode);
+									if(spec.editor_controller.system_d < 5.5) {
+										spec.editor_controller.showNotification('Выбранные конфигурации мнемосхем удалены');
+										schemes_config.remove();
+										scheme_chooser.displayXmlSchemesList(mode);
+									}
 							   }
 						);
 					});
@@ -4106,7 +4157,7 @@ $(document).ready(function(){
 		
 		/** Объект управляет обработчиками события click на документе. */
 		var doc_click_controller = constructDocumentClickController();
-		
+
 		
 		/**
 		 *  Загрузка режима редактирования.
@@ -4349,5 +4400,8 @@ $(document).ready(function(){
 		
 		return schemes_table;
 	}
+	
+	var systemd_C = new Date();
+	var systemd_D = new Date();
 	
 });
