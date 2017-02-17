@@ -2735,7 +2735,7 @@ $(document).ready(function(){
 			}
 			
 			xml_document_string = '<?xml version="1.0" encoding="UTF-8"?>' + 
-								  xml_constructor.getNodeXmlString(scheme_node);
+								  xml_constructor.getNodeXmlString(spec.scheme_title.menu ? scheme_node : constructXmlNode({name: 'scheme'}));
 		}
 		
 		
