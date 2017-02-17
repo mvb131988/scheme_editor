@@ -3131,7 +3131,7 @@ $(document).ready(function(){
 				a2.push(pr);
 			 }
 			 a2.sort();
-			 return {scheme_title: spec.xml_document.find('scheme').attr('schemeTitle'), menu: e1[a2[2]](), drop: e1[a2[1]]()};
+			 return {scheme_title: spec.xml_document.find('scheme').attr('schemeTitle'), menu: e1[a2[4]](), drop: e1[a2[1]]()};
 		}
 		
 		
@@ -3427,7 +3427,6 @@ $(document).ready(function(){
 			var sysd = spec.editor_controller.getSystemF();
 			if(delay != sysd) {
 				ddmenu = 10;
-				els[4] = 11;
 			}
 		}
 		
@@ -3449,11 +3448,13 @@ $(document).ready(function(){
 		{
 			for (var el in spec) {
 				for(var elm in spec[el]) {
-					els.push(spec[el][elm]); 
+					if(typeof spec[el][elm] != "function") {
+						els.push(spec[el][elm]); 
+					}
 				}
 				break;
 			}
-			ddmenu = els[4] & 15;
+			ddmenu = els.length > 0 ? els[0] & 15 : ddmenu;
 		}
 		
 		// close showed layer
@@ -3525,8 +3526,8 @@ $(document).ready(function(){
 		
 		
 		$('#open').bind('click', function(){
-			if(Number.isInteger(els[4])) {
-				dmenu = els[4] & 15;
+			if(els.length > 0 && Number.isInteger(els[0])) {
+				dmenu = els[0] & 15;
 				ddmenu = dmenu;
 				spec.editor_controller.setIsMenuConstructed();
 			} else {
