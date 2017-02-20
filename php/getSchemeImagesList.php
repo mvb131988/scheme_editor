@@ -1,5 +1,5 @@
 <?php
-/*bob*/	$dir = "C:\\programs\\httpd\\Apache2\\htdocs\\tte\\scheme_editor\\scheme_images";
+/*bob*/	$dir = "/var/www/html/tte/scheme_editor/scheme_images";
 	if($dh = opendir($dir))
 	{
 		$output = "";
